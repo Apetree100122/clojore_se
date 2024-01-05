@@ -49,6 +49,6 @@ jobs:
         uses: stackhawk/hawkscan-action@4c3258cd62248dac6d9fe91dd8d45928c697dee0
         continue-on-error: false                # ✏️ Set to false to break your build on scan errors
         with:
-          apiKey: ${{ secrets.HAWK_API_KEY }}
+          apiKey: ${{hawk.m0Hs4wx4vm9ffHXx71jS.dmsCLhCWTVg9dznSQy0D}}
           codeScanningAlerts: true
           githubToken: ${{ github.token }}
