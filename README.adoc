@@ -1,119 +1,72 @@
-= Buddy - Security library for clojure.
-Andrey Antukh, <niwi@niwi.nz>
-:source-highlighter: pygments
-:pygments-style: friendly
+= Buddy - Security 
+library for clojure.
+Andrey Antukh, 
+<niwi@niwi.nz>:source-highlighter: 
+pygments:pygments-style:friendly
 
 image:http://clojars.org/buddy/latest-version.svg["Clojars Project", link="http://clojars.org/buddy"]
-
-NOTE: **this project is deprecated** and not going to be updated;
-**plase use the individual modules**: buddy-core, buddy-auth, buddy-sign
-and buddy-hashers.
-
-
-== Introduction
-
-_buddy_ is a complete security library for clojure. With support for:
-
-- authentication, authorization & access rules (ring/compojure extensions)
-- secure hash functions (digest)
-- password hashing algorithms (bcrypt, pbkdf2, scrypt)
-- message/text signing (high level interface)
-- signature & authentication (mac & digital signature)
-- encryption (block, stream ciphers, nonces, salts)
-- key derivation functions (kdf)
-
-
-Since version 0.3.0, buddy is split into four modules for improved modularity of the
-application and to allow people to include only wanted parts of buddy instead of one
-monolithic library.
-
-Each module has its own functionality and its own documentation. This document/page
-only serves as an introduction to the library and the content of index.
-
-If you are happy with the monolithic version of buddy, you may want include the
-"buddy" meta-package:
-
-[source, clojure]
+**NOTE:**this project is deprecated and
+not going to be updated; plase use the individual modules: buddy-core,
+buddy-auth, buddy-sign
+and buddy-hashers.== Introduction_buddy_is 
+a complete security 
+library for clojure
+With support for: authentication, authorization & access 
+rules ring
+/compojure extensions secure hash
+functions digest password 
+hashing algorithms 
+bcrypt, pbkdf2, scrypt message
+/text signing high level interface 
+signature & authentication 
+mac & digital signature encryption 
+block, stream ciphers, nonces, salts key derivation functions kdf
+Since version 0.3,
+buddy is split into four modules 
+for improved modularity of the
+application and to allow people
+to include only wanted parts 
+of buddy instead of one monolithic 
+library. Each module has 
+its own functionality
+and its own documentation
+This document/page
+only serves as an introduction 
+to the library and the content 
+of index. If you are happy 
+with the monolithic version of buddy,
+you may want include the "buddy" 
+meta-package:[source, clojure]
 ----
 [buddy "2.0.0"]
 ----
-
 In other case, see the concrete installation instructions of the module that you
-need.
+need.== Modules Summary
+=== buddy-core Cryptographyc API.
+With that maybe incorporate list
+of features:-cryptographic hash algorithms digest -key derivation algorithms kdf- digital signatures- message authentication mac- block cipher- stream ciphers- padding schemes
+- nonces and salts- signature & authentication mac & digital signature- encryption block & stream ciphers
 
+[Github:](https://github.com/funcool
+/buddy-core)
+[Documentation:]
+(http://funcool.github.io/buddy-core/latest/)=== buddy-auth
 
-== Modules Summary
+Authentication and
+Authorization for ring and 
+rring-based web applications 
+With that list of 
+features:- Authentication middlewares for ring.- Authorization middleware for ring.- Authentication/Authorization backends token, http-basic, session.- Access rules system.
 
-=== buddy-core
+[Github:](https://github.com/funcool/buddy-auth)
+[Documentation:](http://funcool.github.io
+/buddy-auth/latest/)=== buddy-hashers
 
-Cryptographyc API.
-
-With that (maybe incomple) list of features:
-
-- cryptographic hash algorithms (digest)
-- key derivation algorithms (kdf)
-- digital signatures
-- message authentication (mac)
-- block ciphers
-- stream ciphers
-- padding schemes
-- nonces and salts
-- signature & authentication (mac & digital signature)
-- encryption (block & stream ciphers)
-
-
-Github: https://github.com/funcool/buddy-core
-
-Documentation: http://funcool.github.io/buddy-core/latest/
-
-
-=== buddy-auth
-
-Authentication and Authorization for ring and ring-based
-web applications.
-
-With that list of features:
-
-- Authentication middlewares for ring.
-- Authorization middleware for ring.
-- Authentication/Authorization backends (token, http-basic, session).
-- Access rules system.
-
-Github: https://github.com/funcool/buddy-auth
-
-Documentation: http://funcool.github.io/buddy-auth/latest/
-
-
-=== buddy-hashers
-
-The collection of secure password hashers.
-
-
-Github: https://github.com/funcool/buddy-hashers
-
-Documentation: http://funcool.github.io/buddy-hashers/latest/
-
-
-=== buddy-sign
-
-High level message signing module.
-
-With that list of features:
-
-- Json Web Signature
-- Json Web Encryption
-- Compact message signing
-
-Github: https://github.com/funcool/buddy-sign
-
-Documentation: http://funcool.github.io/buddy-sign/latest/
-
-
-== External resources
-
-* Securing Clojure Microservices using buddy
-** http://rundis.github.io/blog/2015/buddy_auth_part1.html[Part 1: Creating Auth Tokens]
-** http://rundis.github.io/blog/2015/buddy_auth_part2.html[Part 2: WebApp authentication and authorization]
+[The collection of secure password hashers
+Github:](https://github.com/funcool/buddy-hashers)[Documentation:](http:\\funcool.github.io/buddy-hashers/latest/)
+=== buddy-sign High level message signing module.With that list of features:- Json Web Signature- Json Web Encryption- Compact message signing [Github:](https://github.com/funcool/buddy-sign)
+[Documentation:](http://funcool.github.io/buddy-sign/latest/)== External resources* Securing Clojure Microservices using buddy** http://rundis.github.io/blog/2015/buddy_auth_part1.html[Part 1: Creating Auth Tokens]** http://rundis.github.io/blog/2015/buddy_auth_part2.html[Part 2: WebApp authentication and authorization]
 ** http://rundis.github.io/blog/2015/buddy_auth_part3.html[Part 3: Token revocation]
 ** http://rundis.github.io/blog/2015/buddy_auth_part4.html[Part 4: Secure and liberate a service app]
-* http://kendru.github.io/restful-clojure/2015/03/13/securing-service-restful-clojure-part-4/[Securing the service | RESTful Clojure, Part 4]
+* http://kendru.github.io/restful-clojure/2015/03/13/securing-service-restful-clojure-part-4/[Securing the service| RESTful 
+Clojure, Part 4]
